@@ -1,0 +1,958 @@
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+a{
+  text-decoration: none;
+}
+ body{
+  font-family: 'poppins';
+ }
+
+ ul li{
+  list-style: none;
+ }
+
+
+ /* =============navbar============== */
+
+.navbar{
+  padding: 20px 10px;
+  background-color: #489fb5 !important;
+}
+
+.navbar-brand{
+  font-size: 26px;
+  font-family: 'poppins';
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color:#fff;
+}
+
+.btn-main{
+  font-family: 'poppins';
+  padding: 10px 25px !important;
+  color: #fff;
+  background-color: #16697a;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.btn-main:hover{
+  color: #ffa62b;
+}
+
+menu ul li{
+  padding-left: 20px;
+}
+
+.menu ul li a{
+  font-size: 18px !important;
+  font-weight: 500;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 10px !important;
+  margin: 0 5px;
+  position: relative;
+}
+
+.menu ul li a:active{
+  color:#fff !important;
+}
+
+.menu ul li a:after{
+  content: '';
+  position: absolute;
+  background-color:#ffa62b;
+  width: 0px;
+  height: 3px;
+  left: 0;
+  bottom: 0px;
+  transition: 0.3s ease-in-out;
+}
+
+.menu ul li a:hover:after{
+ width: 100%;
+}
+
+.menu ul:hover li a{
+  color: #fff !important;
+}
+
+.menu ul:hover li a:not(:hover){
+  color: black !important;
+  opacity: 0.3;
+  filter: blur(1);
+}
+
+
+/* =========End navbar============= */
+
+.main-banner {
+    height: 90vh !important;
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/banner-04.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+.background-tint {
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
+}
+
+.main-content{
+  color:#fff
+}
+
+.btn-banner{
+  position: relative;
+  background-color: #ffa62b;
+  color: #16697a;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-family: 'poppins';
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.main-content h1{
+  /* position: relative; */
+  font-family: poppins;
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.main-content p{
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing:1.5px;
+}
+
+.section_padding{
+    padding: 120px 0;
+}
+
+.section_padding2{
+  padding: 30px 0;
+}
+
+
+/* ============ Button ============ */
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: $property $duration $ease;
+  }
+  
+  * {
+    box-sizing: border-box;
+    &::before, &::after {
+      box-sizing: border-box;
+    }
+  }
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    &.learn-more {
+      width: 12rem;
+      height: auto;
+      .circle {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #000;
+        border-radius: 1.625rem;
+        .icon {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: #fff;
+          &.arrow {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            left: 0.625rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+            &::before {
+              position: absolute;
+              content: '';
+              top: -0.25rem;
+              right: 0.0625rem;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-top: 0.125rem solid #fff;
+              border-right: 0.125rem solid #fff;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+      .button-text {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color:#ff0202;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    &:hover {
+      .circle {
+        width: 100%;
+        .icon {
+          &.arrow {
+          background: #fff;
+          transform: translate(1rem, 0);
+          }
+        }
+      }
+      .button-text {
+        color: #fff;
+      }
+    }
+  }
+  
+
+
+/* ================ END Button ========== */
+
+.fea-box{
+  display: flex;
+  background-color: #FFF;
+  padding: 15px;
+  border: 2px solid #16697a;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.fea-box:hover{
+  background-color: #ffa62b;
+}
+
+.fea-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.fea-details{
+  display: flex;
+  justify-content:center ;
+  align-items: start;
+  flex-direction: column;
+  width: 70%;
+}
+.fea-t{
+  color: #000;
+  font-size: 16px;
+  font-family: 'poppins';
+  font-weight: 600;
+}
+
+.fea-c{
+  color: #000;
+  font-size: 14px;
+  font-family: 'poppins';
+  font-weight: 400;
+}
+
+/* ================== Section 1 ==================== */
+.section1{
+  background-blend-mode: soft-light;
+  background-image: url(../img/section-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #82c0cc !important;
+}
+
+.txt-span{
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    font-weight: 700;
+    color: #16697a;
+}
+
+.welcome h2{
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 800;
+    font-size: 56px !important;
+}
+
+.welcome p{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500;
+    margin: 20px 0 !important;
+}
+
+.points h3{
+    font-size: 26px;
+    font-family: 'poppins';
+    font-weight: 600;
+}
+
+.points p {
+    font-size:14px;
+    font-family: 'poppins';
+    font-weight: 500;
+    margin-top: -5px !important;
+}
+
+.fit-model{
+    position: relative;
+    overflow: hidden;
+}
+
+.offer{
+    position: absolute;
+    left: 30%;
+    bottom: 20%;
+    width: 120px;
+    height: 120px;
+    background-color: #FF9078;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer span{
+    color: aliceblue;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.fit-model img{
+    float: right;
+    width: 70%;
+    height:100%;
+}
+
+/* =========== OUR PRODUCT =============== */
+
+.our_product{
+  background-color: #ede7e3;
+}
+
+.heading h2{
+    font-size: 42px;
+    font-family: 'poppins';
+    font-weight: 800;
+    text-align: center;
+    color: #000;
+}
+.m-b-4{
+ margin-bottom: 50px;
+}
+.product_card {
+    padding: 20px !important;
+    border: 2px solid #283779 !important;
+}
+
+.prod-img img{
+    width: 100%;
+}
+
+.prod_details h3{
+    font-size: 32px;
+    font-family: 'poppins';
+    font-weight: 600;
+}
+
+.prod_details p{
+    font-size: 18px;
+    font-family: 'poppins';
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.prod_details h4{
+    font-size: 16px;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+
+.strength{
+    /* background-color: #FF9078; */
+    height: 120px;
+}
+
+
+
+
+/* =========== Promo Section ================ */
+
+.promo{
+    background-image: url(../img/everything-is-possible-young-plus-size-woman-in-sport-clothes-running-outdoors-weight-losing.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay-field{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color:#2c2c2c;
+    opacity: 0.5;
+}
+
+.fit-promo span{
+    position: relative;
+    color:#fff;
+    font-weight: 600;
+}
+
+.fit-promo h2{
+    position: relative;
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.fit-promo p{
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: #eecdc8;
+}
+
+.fit-promo button{
+    position: relative;
+}
+
+/* ==================== Blogs Section ============= */
+
+.blog_img img{
+    width: 100%;
+    padding: 20px;
+}
+.blog_box{
+    background-color: #82c0cc;
+    border-radius: 10px;
+}
+.blog_details{
+    text-align: center;
+    padding: 20px;
+}
+
+.blog_details h3{
+    font-size: 24px;
+    font-family: 'poppins';
+    font-weight: 600;
+}
+
+.blog_details p{
+    font-size: 16px;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+
+.blog_details span{
+    font-size: 16px;
+    font-family: 'poppins';
+    font-weight: 500;
+    color: #fff;
+    border-bottom: 3px solid #ffa62b;
+}
+
+
+
+/* ================== Testimoniial ================= */
+.testimonial_bg{
+    position: relative;
+    background-color: #222831;
+    z-index: 1;
+}
+
+.testimonial_bg::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    height: 61px;
+    background-image: url(../img/feature-bg-shape-1.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    z-index: -1;
+}
+
+/* .testimonial_bg::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 61px;
+        background-image: url(../img/feature-bg-shape-2.png);
+        background-repeat: repeat-x;
+        background-position: center;
+        z-index: -1;
+} */
+
+.testimonial-heading {
+
+}
+.testimonial-heading h2{
+    color: #fff;
+    font-size: 56px;
+    font-family: 'poppins';
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.testimonial-heading p{
+    color: #fff;
+    font-size: 16px;
+    font-family: 'poppins';
+    font-weight: 500;
+    letter-spacing:0.6px;
+}
+
+
+.testimonial-container{
+    background-color: #393E46;
+    color: #fff;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 50px 80px;
+    max-width: 768px;
+    position:relative;
+  }
+  
+  .fa-quote{
+    color:#FFD369;
+    font-size: 28px;
+    position: absolute;
+    top: 70px;
+  }
+  
+  .fa-quote-right{
+    left: 40px;
+  }
+  
+  .fa-quote-left{
+    right: 40px;
+  }
+  
+  .testimonial{
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  
+  .user{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  .user .user-image{
+    border-radius: 50%;
+    border: 3px solid #FFD369;
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+  }
+  
+  .user .user-details{
+    margin-left: 10px;
+  }
+  
+  .user .username{
+    margin: 0;
+  }
+  
+  .user .role{
+    font-weight: normal;
+    margin: 10px 0;
+  }
+  
+  .progress-bar{
+    background-color: #FFD369;
+    height: 4px;
+    width: 100%;
+    margin-bottom: 40px;
+    animation: grow 10s linear infinite;
+    transform-origin: left;
+  }
+  
+  @keyframes grow{
+    0%{
+      transform: scaleX(0);
+    }
+  }
+  
+  @media(max-width: 768px){
+    .testimonial-container{
+      padding: 20px 30px;
+    }
+    
+    .fa-quote{
+      display: none;
+    }
+  }
+
+
+  /* ============= FAQ SECTION ============= */
+
+  .faq_bg{
+    background-color: #82c0cc;
+}
+  
+  .faq_heading h2{
+    font-size: 42px;
+    font-family: 'poppins';
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .faq_heading span{
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .faq_heading p{
+    font-size: 16px;
+    font-family: 'poppins';
+    font-weight: 500;
+  }
+
+  .accordion{
+    --bs-accordion-btn-focus-border-color: #ffffff !important;
+  }
+ 
+  .accordion-body{
+    background-color: #e4f6f3 !important;
+}
+
+.accordion-button{
+    font-size: 16px !important;
+    font-family: 'poppins';
+    font-weight: 500;
+    color: #000;
+}
+  .accordion-button:focus{
+    border:none  !important;
+  } 
+
+  .accordion-button:not(.collapsed) {
+    color: #ffa62b;
+    background-color:#16697a!important;
+}
+
+.accordion-button::after {
+    color: #ffa62b !important;
+}
+
+button:focus(:focus-visible) {
+    outline: 0;
+}
+
+
+/* =========content Section=========== */
+
+.cont-area h2{
+  font-weight:600;
+  font-weight: 42px !important;
+  font-family: 'poppins';
+  color: #16697a;
+  margin-bottom: 30px;
+}
+
+.cont-area-heading {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'poppins';
+  color: #489fb5;
+}
+
+.cont-area-section p {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 500; 
+}
+
+
+/*========= Ozempic Page ================ */
+
+
+.section_box{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+/* ==========Form booking============== */
+.main-heading h1{
+  font-family: 'poppins';
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 10px;
+}
+
+input:-internal-autofill-selected{
+  background-color: #000 !important;
+}
+
+.input-box label {
+  color: #000;
+}
+
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 35px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #808080;
+  margin-top: 5px;
+  border-bottom: 2px solid #000 !important;
+  padding: 0 15px;
+}
+
+.input-box input{
+  border: none;
+  border-bottom: 2px solid #000 !important;
+}
+
+
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+
+.address :where(input, .select-box) {
+  margin-top: 10px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #808080;
+  font-size: 1rem;
+}
+
+.form button {
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #16697a!important;
+}
+
+.form button:hover {
+  background: #da0812 !important;
+}
+
+
+
+/* =============testimonial=========== */
+.testimonial-box {
+  display: block;
+  position: relative;
+  padding: 30px 20px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.03);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .08);
+}
+.user-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+min-width: 80px;
+background-size: 100%;
+}
+.carousel-testimonial .item {
+padding: 30px 10px;
+}
+.quote {
+ position: absolute;
+  top: -23px;
+  color: #2e9da1;
+  font-size: 27px;
+}
+.name {
+  margin-top:10px !important;
+  line-height: 14px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.position {
+color: #adadad;
+font-size: 14px;
+}
+.carousel-testimonial .owl-nav {
+text-align: center;
+}
+.carousel-testimonial .owl-nav button.owl-next, 
+.carousel-testimonial .owl-nav button.owl-prev {
+  padding: 0 12px !important;
+}
+.carousel-testimonial .owl-nav button {
+outline: none;
+padding: 0;
+}
+.carousel-testimonial .owl-nav button.owl-next span, 
+.carousel-testimonial .owl-nav button.owl-prev span {
+display: block;
+  font-size: 40px;
+  width: 25px;
+  height: 25px;
+  vertical-align: 0px;
+  line-height: 16px;
+}
+.carousel-testimonial .owl-nav button.owl-next.disabled, 
+.carousel-testimonial .owl-nav button.owl-prev.disabled {
+opacity: 0.5;
+}
+
+
+
+/* ---------------booking process ---------------- */
+.process-bg{
+  background-color: #000000;
+  padding: 50px 0; 
+}
+
+.process .card{
+  backdrop-filter: blur(10px);
+  background-color: #ffffff32;
+  height: 250px;
+}
+
+.process .card:hover{
+  transform: scale(1.1);
+}
+
+.process h2{
+  font-size: 48px;
+  font-weight: 800;
+  font-family:'poppins';
+  text-align: center;
+  margin-bottom: 20px !important;
+  color: #fff;
+}
+
+.process p{
+  font-size: 20px;
+  font-weight: 500;
+  font-family:'poppins';
+  text-align: center;
+  margin-bottom: 30px !important;
+  color: #fff;
+}
+
+.process div span{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'poppins';
+}
+
+.c-img{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+
+
+
+
+/* ===========Footer================ */
+.footer_padding{
+  padding: 60px 0 20px 0;
+  background-color: #16697a;
+  color: #fff;
+}
+
+.f-padding{
+  padding: 30px 0;
+}
+
+.footer ul li{
+  margin-top: 10px;
+}
+.c-info li i{
+  color: #ffa62b;
+}
+
+.footer a{
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.footer p{
+  color:#82c0cc;
+}
+
+.f-product h6,.f-links h6{
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffa62b;
+  margin-bottom: 20px;
+}
+.f-product ul li a,.f-links ul li a{
+  font-weight: 500;
+  color: #fff !important;
+}
+
+.f-product ul li,.f-links ul li{
+ margin-top: 10px;
+} 
+
+.f-product ul li:hover,.f-links ul li:hover{
+  margin-left: 5px;
+  color: #ffa62b;
+ } 
+
